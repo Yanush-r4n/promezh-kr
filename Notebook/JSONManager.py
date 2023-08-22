@@ -17,6 +17,8 @@ class JSONManager(Converter):
             json.dump(dict_memory, file, indent=4)
 
     def read(self, note_id: str):
+        self.save()
+
         with open("D:\\Projects\\GB\\Notebook\\Memory.json", "r") as file:
             data = json.load(file)
 
